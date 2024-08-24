@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backtesting Engine</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Include Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <h1>Simple Backtesting Engine</h1>
+            <h2>Flaroon ~ Tirth Patel</h2>
+            <div class="inputs-performance">
+                <form id="backtest-form" class="inputs-section">
+                    <label for="symbol">Stock Symbol:</label>
+                    <input type="text" id="symbol" name="symbol" value="MSFT" required>
+            
+                    <label for="start_date">Start Date:</label>
+                    <input type="date" id="start_date" name="start_date" value="2023-01-01" required>
+            
+                    <label for="end_date">End Date:</label>
+                    <input type="date" id="end_date" name="end_date" value="2023-12-31" required>
+            
+                    <button type="submit">Run Backtest</button>
+                </form>
+                <div class="performance-section">
+                    <h2>Strategy Performance (Strategy Name)</h2>
+                    <p id="starting-portfolio-value">Starting Portfolio Value: --</p>
+                    <p id="final-portfolio-value">Final Portfolio Value: --</p>
+                    <p id="total-return">Total Return: --</p>
+                    <p id="profit">Profit: --</p>
+                    <p id="number-of-trades">Number of Trades: --</p>
+                </div>
+                
+            </div>
+            <div id="plot-container">
+                <div id="plot"></div>
+            </div>          
+        </div>        
+        <div class="right-side">
+            <div class="strategy-buttons">
+                <button class="strategy-button" data-strategy="Moving Average Crossover" onclick="selectStrategy('Moving Average Crossover')">MA Crossover</button>
+                <button class="strategy-button" data-strategy="RSI" onclick="selectStrategy('RSI')">RSI</button>
+                <button class="strategy-button" data-strategy="MACD" onclick="selectStrategy('MACD')">MACD</button>
+                <button class="strategy-button" data-strategy="Bollinger Bands" onclick="selectStrategy('Bollinger Bands')">Bollinger</button>
+                <button class="strategy-button" data-strategy="Momentum" onclick="selectStrategy('Momentum')">Momentum</button>
+            </div>
+            
+            <!-- Strategy-specific variable panel -->
+            <div id="variable-panel" class="variable-panel" style="display: none;">
+                <h3>Strategy Variables</h3>
+                <div id="variables-container"></div>
+            </div>
+            
+            <div class="placeholder-block">
+                <h1 id="strategy-info-title">Strategy Information</h1> <!-- Added id for the title -->
+                <p id="strategy-info">Select a strategy to see details here.</p>
+            </div>            
+        </div>
+        
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

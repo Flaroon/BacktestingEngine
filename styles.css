@@ -1,0 +1,326 @@
+/* Updated CSS */
+
+body {
+    font-family: "Jersey 10", sans-serif;
+    height: 100vh;
+    margin: 0;
+    background-color: #4D243D;
+    color: #4D243D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container {
+    font-family: "Jersey 10", sans-serif;
+    width: 95%;
+    height: 95%;
+    display: flex;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.left-side, .right-side {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-side {
+    background-color: rgba(255, 220, 200, 0.9);
+    border-radius: 15px 0 0 15px;
+}
+
+.left-side button {
+    width: 70%;
+}
+.right-side {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0 15px 15px 0;
+}
+
+.left-side h1 {
+    font-family: "Jersey 10", sans-serif;
+    margin-top: 20px;
+    font-size: 3.5em;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #4D243D;
+    margin: 0;
+    text-align: center;
+}
+
+.inputs-performance {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically in the center */
+}
+
+.inputs-section {
+    font-family: "Jersey 10", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the run button */
+    width: 50%;
+}
+
+.performance-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding-left: 20px;
+    font-size: 1.2em;
+    color: #4D243D;
+}
+
+.performance-section p {
+    margin-top: 0;
+}
+
+
+label {
+    font-size: 1.2em;
+    color: #4D243D;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="date"] {
+    font-family: "Jersey 10", sans-serif;
+    padding: 10px;
+    font-size: 1em;
+    width: 80%;
+    margin: 10px 0;
+    border: 2px solid #4D243D;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+}
+
+button {
+    padding: 15px 30px;
+    margin-top: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: 2px solid #4D243D;
+    background-color: #EDD4B2;
+    color: #4D243D;
+    font-family: "Jersey 10", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-transform: uppercase;
+    border-radius: 5px;
+    width: 100%; /* Make buttons take up full width */
+}
+
+button:hover {
+    background-color: #4D243D;
+    color: #EDD4B2;
+}
+
+button:focus {
+    outline: none;
+}
+
+#plot-container {
+    margin-top: 30px;
+    width: 100%;
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border: 3px solid #4D243D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#plot {
+    width: 100%;
+    height: 100%;
+}
+
+.placeholder-block {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.strategy-buttons {
+    display: flex;
+    width: 100%;
+    gap: 10px; /* This adds equal spacing between the buttons */
+}
+
+.strategy-button {
+    flex: 1;
+    margin: 0; /* Resetting any default margin */
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    input[type="text"],
+    input[type="date"] {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1.2em;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-side, .right-side {
+        border-radius: 15px;
+    }
+
+    .inputs-performance {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .inputs-section, .performance-section {
+        width: 100%;
+    }
+}
+
+.variable-panel {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0 15px 15px 0;
+    width: 95%;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    margin-left: 20px;  /* 20px margin from the left */
+    margin-right: 20px; /* 20px margin from the right */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.variable-panel h3 {
+    font-family: "Jersey 10", sans-serif;
+    margin: 0;
+    margin-bottom: 10px;
+    color: #4D243D;
+    text-align: center;
+}
+
+.variable-panel label {
+    font-family: "Jersey 10", sans-serif;
+    font-size: 1em;
+    color: #4D243D;
+    margin-top: 10px;
+    display: block;
+    padding-left: 10px; /* Padding on the left */
+    padding-right: 10px; /* Padding on the right */
+}
+
+.variable-panel input[type="number"] {
+    font-family: "Jersey 10", sans-serif;
+    padding: 8px;
+    font-size: 1em;
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    margin: 5px 0; /* No margin on the left and right */
+    border: 2px solid #4D243D;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+}
+/* Container for the strategy information */
+#strategy-info {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-grow: 1;
+    margin-top: 10px;
+}
+/* Headings within the strategy-info */
+#strategy-info h4 {
+    font-size: 1.4em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Paragraphs and lists */
+#strategy-info p, #strategy-info ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* Indented lists */
+#strategy-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Center MathJax equations */
+#strategy-info .MathJax_Display {
+    text-align: center !important;
+    margin: 1em 0;
+}
+
+/* Preserve the layout of other RHS elements */
+.right-side .placeholder-block {
+    font-size: inherit;
+    line-height: normal;
+    text-align: inherit;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Ensure that the content inside this block does not overflow */
+}
+
+
+/* Custom scrollbar styles for WebKit browsers (e.g., Chrome, Safari) */
+#strategy-info::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+#strategy-info::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+#strategy-info::-webkit-scrollbar-thumb {
+    background-color: #4D243D; /* Scrollbar color */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    border: 2px solid #EDD4B2; /* Adds a border for better visibility */
+}
+
+/* For Firefox */
+#strategy-info {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #4D243D #f1f1f1; /* Thumb color and track color */
+}
+
+/* Custom scrollbar styles for Microsoft Edge and Internet Explorer */
+#strategy-info {
+    -ms-overflow-style: -ms-autohiding-scrollbar; /* Auto-hiding scrollbar */
+}
+.selected {
+    background-color: #4CAF50; /* Green background for the selected button */
+    color: #fff;               /* White text for better contrast */
+    border-color: #4CAF50;     /* Match the border with the background */
+}
